@@ -1,0 +1,174 @@
+% platexî≈ graduate.sty <7 Feb 1999> by Yasuhiro Tachibana
+%
+\typeout{Option Style `graduate' <7 Feb 99>.}
+%
+% Å`Å`Å`Å`Å`égópñ@Å`Å`Å`Å`Å`
+%
+% Ç‹Ç∏ÅC\documentclass{jreport} Ç∆ÇµÇ‹Ç∑ÅD
+%
+% ÉvÉäÉAÉìÉuÉã(\begin{document}ÇÊÇËëOÇÃïîï™)Ç…à»â∫ÇÃÇÊÇ§Ç…èëÇ´Ç‹Ç∑ÅD
+%
+% \usepackage{graduate}
+%
+% \title{ë≤ò_ÇÃÉ^ÉCÉgÉã}
+% \author{é©ï™ÇÃñºëO}
+%
+% ÇaÇSÇÃêlÇÕ
+% \major{èÓïÒçHäwâ»}
+% \department{ã„èBëÂäwçHäwïîèÓïÒçHäwã≥é∫}
+%
+% ÇlÇQÇÃêlÇÕ
+% \major{èCémâ€íˆ èÓïÒçHäwêÍçU})
+% \department{ÉVÉXÉeÉÄèÓïÒâ»äwå§ãÜâ» èÓïÒçHäwêÍçU}
+%
+% Ç‹ÇΩÅC\begin{document} ÇÃéüÇÃçsÇ…
+%
+% \maketitle
+%
+% ÇñYÇÍÇ∏Ç…èëÇ¢Çƒâ∫Ç≥Ç¢ÅD
+
+\makeatletter
+\def\major{\def\@major}
+\def\department{\def\@department}
+\title{ë≤ò_ÇÃÉ^ÉCÉgÉã}
+\author{íòé“}
+\date{\number\year îN \number\month åé}
+%\date{2000 îN}
+\major{èÓïÒçHäwâ»}
+\department{ã„èBëÂäwçHäwïîèÓïÒçHäwã≥é∫}
+\def\@acknowledgmentname{é”é´}
+\def\@appendixname{ïtò^}
+\def\@referencename{éQçlï∂å£}
+
+%çsä‘ÇÃïœçX
+\baselineskip=1473097sp         % çsä‘ê›íË
+\def\baselinestretch{1.4}
+
+\textwidth     16cm
+\oddsidemargin 0pt
+\topmargin     4.6mm
+\headheight    6.4mm
+\headsep       9.2mm
+\textheight    215mm
+\footskip      6.4mm
+%\textwidth 16cm%470pt
+%\textheight 23.7cm%698pt
+%\headsep 26pt
+%\topskip 20pt
+%\oddsidemargin 0pt
+%\topmargin 4.6mm%-22pt
+%\footskip 18pt
+
+\partopsep 2pt plus 2pt minus 2pt
+
+\def\head@chapapp{\@chapapp{\thechapter}}
+\def\baselinechange#1{\def\baselinestretch{#1}\@normalsize}
+
+% \chapter ÉRÉ}ÉìÉhóp heading
+\renewcommand{\@makechapterhead}[1]{
+  \vspace*{50pt}
+  {\parindent 0pt \raggedright 
+    \ifnum \c@secnumdepth >\m@ne      % IF secnumdepth > -1 THEN
+      \huge\bf \@chapapp \thechapter \par
+    \vskip 20pt \fi
+    \Huge \bf #1 \par
+    \nobreak
+    \vskip 40pt                       % É^ÉCÉgÉãÇ∆ÉeÉLÉXÉgÇÃä‘ÇÃÉXÉyÅ[ÉX.
+  }
+}
+
+\def\maketitle{
+\begin{titlepage}
+\null
+\vfil
+\begin{center}
+{\huge\bf\gt\@title\par}\vskip 26em minus 1em
+{\LARGE\bf\gt\@author\par}\vskip 4em minus 4em
+{\Large\bf\@date}\vskip 3em minus 1em
+{\Large\bf\gt\@major\par}
+\end{center}
+\vfil
+\newpage
+{\pagenumbering{roman}
+ \baselinechange{1}
+ \tableofcontents}
+\newpage
+\pagenumbering{arabic}
+\pagestyle{myheadings}
+\gdef\chaptermark##1{\@chaptermark{\head@chapapp\ \ {##1}}}
+\gdef\@chaptermark##1{\gdef\@thehead{\vbox{\hbox to \textwidth{
+  \gt\bf\ {##1}\hfil\thepage\ }
+  \hbox{\rule[-2pt]{\textwidth}{1pt}}}}}
+\gdef\@thefoot{\vbox{
+ \hrule width\textwidth height0.25pt\vskip3pt
+ \hbox to\textwidth{\hfill{\footnotesize\@department}\hspace{40pt}}}}
+\setcounter{page}{1}
+\end{titlepage}}
+
+\def\preface#1{\clearpage\typeout{#1}
+ \thispagestyle{plain}
+ \global\@topnum\z@ \@afterindenttrue
+ \addcontentsline{toc}{chapter}{#1}
+ \@chaptermark{\bf\gt #1}
+ \@makeschapterhead{\bf\gt #1}
+ \@afterheading}
+
+\def\acknowledgment{\clearpage\typeout{\@acknowledgmentname}
+ \thispagestyle{plain}
+ \global\@topnum\z@ \@afterindenttrue
+ \addcontentsline{toc}{chapter}{\@acknowledgmentname}
+ \refstepcounter{chapter}
+ \@chaptermark{\@acknowledgmentname}
+ \@makeschapterhead{\@acknowledgmentname}
+ \@afterheading}
+
+\def\thebibliography#1{\chapter*{\@referencename\@mkboth
+ {\refname}{\refname}}
+ \typeout{\@referencename}\addcontentsline{toc}{chapter}{\@referencename}
+ \@chaptermark{\@referencename}
+ \list
+ {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+ \advance\leftmargin\labelsep
+ \usecounter{enumi}}
+ \def\newblock{\hskip .11em plus .33em minus .07em}
+ \sloppy\clubpenalty4000\widowpenalty4000
+ \sfcode`\.=1000\relax}
+\let\endthebibliography=\endlist
+
+\def\appendix{\par
+ \setcounter{chapter}{0}
+ \setcounter{section}{0}
+ \def\@chapapp{\@appendixname\ \Alph{chapter}}
+ \def\head@chapapp{\@appendixname\ \Alph{chapter}}
+ \def\thechapter{}
+ \def\thesection {\Alph{chapter}.\arabic{section}}
+\def\thefigure{\Alph{chapter}.\@arabic\c@figure}
+ \def\thetable{\Alph{chapter}.\@arabic\c@table}
+ \def\theequation{\Alph{chapter}.\arabic{equation}}
+ \gdef\@chapter[##1]##2{
+  \refstepcounter{chapter}
+  \typeout{\@appendixname\space\Alph{chapter}}
+  \addcontentsline{toc}{chapter}{\@appendixname\ \Alph{chapter} ##1}
+  \chaptermark{##1}
+  \addtocontents{lof}{\protect\addvspace{10pt}}
+  \addtocontents{lot}{\protect\addvspace{10pt}} \if@twocolumn
+  \@topnewpage[\@makechapterhead{##2}] 
+  \else \@makechapterhead{##2}
+  \@afterheading \fi}
+}
+
+\def\tableofcontents{\@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
+ \fi\chapter*{\contentsname\@mkboth{\contentsname}{\contentsname}}
+ \@starttoc{toc}\if@restonecol\twocolumn\fi}
+\def\l@part#1#2{\addpenalty{-\@highpenalty}
+ \addvspace{2.25em plus 1pt} \begingroup
+ \@tempdima 3em \parindent \z@ \rightskip \@pnumwidth \parfillskip
+-\@pnumwidth 
+ {\large \bf \leavevmode #1\hfil \hbox to\@pnumwidth{\hss #2}}\par
+ \nobreak \endgroup}
+
+\def\@chapapp#1{ëÊ\thechapter èÕ}
+\def\@chappos{}
+\makeatother
+
+

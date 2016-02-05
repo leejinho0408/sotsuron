@@ -1,0 +1,33 @@
+\contentsline {chapter}{\numberline {第1章}序論}{1}
+\contentsline {section}{\numberline {1.1}背景}{1}
+\contentsline {section}{\numberline {1.2}本研究の目的}{2}
+\contentsline {section}{\numberline {1.3}概要}{2}
+\contentsline {section}{\numberline {1.4}本論文の構成}{3}
+\contentsline {chapter}{\numberline {第2章}NDTを用いた位置同定}{4}
+\contentsline {section}{\numberline {2.1}概念}{4}
+\contentsline {section}{\numberline {2.2}Normal Distribution Transform(NDT)}{5}
+\contentsline {section}{\numberline {2.3}パーティクルフィルタ}{9}
+\contentsline {section}{\numberline {2.4}地図データと計測データとのマッチング(尤度計算)}{10}
+\contentsline {chapter}{\numberline {第3章}ステレオカメラを用いた位置同定}{14}
+\contentsline {section}{\numberline {3.1}概要}{14}
+\contentsline {section}{\numberline {3.2}ステレオカメラ}{15}
+\contentsline {subsection}{\numberline {3.2.1}ステレオカメラデータ取得部のシステム構成}{15}
+\contentsline {subsection}{\numberline {3.2.2}キャリブレーション}{16}
+\contentsline {subsection}{\numberline {3.2.3}ステレオ画像の特徴}{21}
+\contentsline {section}{\numberline {3.3}ステレオカメラを搭載した実験用台車}{22}
+\contentsline {section}{\numberline {3.4}環境地図}{25}
+\contentsline {subsection}{\numberline {3.4.1}環境地図の取得法}{25}
+\contentsline {subsection}{\numberline {3.4.2}台車の位置計測法}{27}
+\contentsline {chapter}{\numberline {第4章}計測実験と評価}{29}
+\contentsline {section}{\numberline {4.1}概要}{29}
+\contentsline {section}{\numberline {4.2}屋内実験}{31}
+\contentsline {subsection}{\numberline {4.2.1}テクスチャー無の屋内位置同定実験・評価}{31}
+\contentsline {subsection}{\numberline {4.2.2}テクスチャー有の屋内位置同定実験・評価}{38}
+\contentsline {subsection}{\numberline {4.2.3}ステレオカメラとKinect V2との比較実験・評価}{46}
+\contentsline {section}{\numberline {4.3}屋外実験}{49}
+\contentsline {subsection}{\numberline {4.3.1}ステレオカメラとRGB-Dカメラの日光影響によるデータ比較}{49}
+\contentsline {subsection}{\numberline {4.3.2}屋外位置同定実験・評価}{51}
+\contentsline {subsection}{\numberline {4.3.3}一本の木に対する実験・評価}{54}
+\contentsline {chapter}{\numberline {第5章}結論}{57}
+\contentsline {chapter}{謝辞}{59}
+\contentsline {chapter}{参考文献}{60}

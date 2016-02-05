@@ -1,0 +1,74 @@
+%===================================================================================================
+\if 0
+　　　　　 　　　　,,,,,,,,,,　　　 　 　　　　　　　 　　　　　　　　　 　　　　lll,,,
+　 　　　　　　　　'lllllll''' 　　 　 　 　 ,,llll,,,,, 　 　 　　　 　 　 　 　 ,l,,,, 　''''llll,,,,
+　　 　　 　　　　　lllllll, 　 　 　 ,,,,,,,,,lllllllllllllll 　 　 　 　　 　　 　　 '''lllll,,,,　 ''''lllllllllll
+　　　 　　　 　　　 llllll,,,,,,llllllllllll''''''''''''' 　 　 　 　 　 　 　 　 　 ,,,,,, 　 '''lllll,,,,　 ''''lllll
+　 　 ,,,,,,,,,,,,,,lllllllllllll'''''''''''' 　 lllllllll,,　 　 　　　　　　　　　 　 　　'''lllll,,,, 　 '''lllllllllllll,
+,lllllllll''''''''''lllllll,,,,, 　 　 　 　 ,lllllll'　 　　　　　 　　　　　　　　ll,,,　 　'''lllll,lllllll,　''lllllll 　 　 　 ,,,,,lllll,
+　　 　 　 ,llllllll'''　　　　　　,llllllll,,,,,,,,,,,, 　　　　　 　 　　　 ,,　'''llll,,,,　 　'''lllllll,　　 ' 　 ,,,,,,,llllllllllllllllll
+　 　　 　 lllllll,,,　 　　　　 ,,lllll'　''''''llllllllllll,,　 　 　 　 　 ,,llllll, 　　''lllllllllll,　,,,ll,,,,,,,llllllllllllllllll''''''' ,lllll
+　　 　 　lllllll''''lllllllll,,,, 　 ,lllll'' 　 　　'''''llllllll　 　 　 　 ,,llllllllllllll,,, 　　'''lllll' ''''''''''''ll'''''''' 　 　 　 llllll
+　 　 　 ,lllllll 　　'lllllllll,　lll'' 　　 　 　 　 ''　 ,,,,,, 　　 ,llllllll''　 ''''lllllllll 　　 ,l,, 　　'lllll,,,　　　　　llllll,
+　　 　 ,llllll'　　　　'''''' llllllllll'　 　 　 　 　 ,,,llllllllllllll,llllllll''　 　 ,llllllllllll　,,lllllllll,,,　 　''''llll,,,,,,,,,,,,　llllll,
+　 　　lllll'' 　 　　 　 　 lllllll,　,,,,,,,,,,,,lllllllllllll'''''''''''llllllllllll,,　　 ,,llllllll''　 ,,llllllll'''''llllll,,, 　　 '''lllllllll,　lllllll
+　　 lllll'' 　　 　,,,,,,,,,,,,,,,lllllllllllll'''''''''''' 　 　　 　,,llllllll'' '''lllll,,,llllllll'' 　,,llllllll''' 　,,lllllllllll,,,, 　 　'''ll'　lllllll,,
+　　,l,,,,,,,,lllllllllllll''''''''''''　 'lllllll　　　 　　　 　　　 ''' 　 　 ,lllllllll'' 　,lllllllll''lllll,,,lllllllll'　'''llllll,,,　 　　 lllllllll,,
+　　'''''''''''　　　 　 　　　 'lllllll　　　　　　　　　　　　　　''l'll'' 　,,llllllll''' 　 lllllllllll 　 ,llllllll''lllll,,,,,,, 　''''''''''
+　　　　　　　　　　　　　　llllll, 　　 　　　 　　 　　　　　　　 ,,llllllll'' 　 ,lllllllll'''''llllllllllll''　　 llllllllll,
+　　　　　　　　　　　　　　lllllll,　　 　 　　　　　 　　　　　　 lllllll'' 　 ,llllllll'' 　 ,,lllllllllll,,,　,,lllllll''''
+　　　　　　　　　　　 　　　llllll'　　　　　　　　　　　　　　　　　　 　lllllll'' 　 ,llllllll' 　'''llllllllll''
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　,,lllllll''　 　,llllllll''
+　　　 　　　　　　 　 　　　 　　　 　　　　 　　　　　　　 　 　　　　 　 　''llll'lll,,,,　,,lllllll'
+　 　　　　　　　　　　　　　　　　　　 　　　　 　　　　　　　　　　　　　　 　　'lllllllllllll''
+　　　　　　　 　　　　　 　　 　　 　　　　　　　　　　　　　　　　　　　　　　　''lllllll'''
+\fi
+%===================================================================================================
+
+%---------------------------------------------------------------------------------------------------
+% preamble
+\documentclass{jreport}
+% スタイル
+\usepackage{sty/graduate}
+\usepackage{sty/subfigure}
+\usepackage{sty/here}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[dvipdfm]{graphicx}
+
+\usepackage[dvipdfm]{color}
+\usepackage[T1]{fontenc}
+\usepackage[varg]{txfonts}
+% 箇条書き
+\usepackage{enumerate}
+% 太字
+\usepackage{bm}
+% 表の行結合
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{array}
+
+\newcommand{\bhline}[1]{\noalign{\hrule height #1}}   
+
+\normalfont
+\pagestyle{plain}
+\title{NDTを用いたステレオカメラによる\\移動ロボットの自己位置同定手法の開発}
+\author{李 珍鎬}
+\date{平成28年2月}
+\major {電気情報工学科}
+\department{九州大学工学部電気情報工学科}
+
+%---------------------------------------------------------------------------------------------------
+% document
+\begin{document}
+\maketitle
+\input{chapter/序論}
+\input{chapter/NDTを用いた位置同定}
+\input{chapter/ステレオカメラを用いた位置同定}
+\input{chapter/計測実験と評価}
+\input{chapter/結論}
+\input{chapter/acknowledgement}
+\input{chapter/参考文献}
+\end{document}\Uparrow
